@@ -47,3 +47,97 @@ int main() {
 - float: %f
 - double: %lf
 - char: %c
+
+# Condicionales
+- La condición va entre paréntesis
+- Es "else if"
+- if, else if, else NO llevan ; al final
+````C
+#include <stdio.h>
+
+int main(){
+    int x = 2;
+
+    if(x>7)
+    {
+        printf("x > 7\n");
+    }
+    else if(x < 5>)
+    {
+        printf("x < 5\n");
+    }
+    else 
+    {
+        printf("x <= 7 & x>= 5");
+    }
+
+    return 0
+}
+````
+
+# Loops
+Tampoco llevan ; al final
+## For
+
+``for ( init-clause ; cond-expression ; iteration-expression )``
+
+````C
+#include <stdio.h>
+int main() {
+        for(int i=0; i<5; i+=1)
+        {
+                printf("Ciclo %i!\n", i);
+        }
+
+        return 0;
+}
+````
+
+## While
+``while (expression)``
+````C
+#include <stdio.h>
+int main(){
+        int i=0;
+        while(i<5)
+        {
+                printf("Ciclo %i!\n",i);
+                i+=1;
+        }
+
+        return 0;
+}
+````
+
+## Break
+Causes the enclosing for, while or do-while loop or switch statement to terminate.
+
+````C
+#include <stdio.h>
+int main(){
+    while(alive) 
+    {
+        // codigo
+        if (must_kill) break;
+    }
+
+    return 0;
+````
+
+## Continue
+Causes the remaining portion of the enclosing for, while or do-while loop body to be skipped.
+
+````C
+int main(){
+    while(alive) 
+    {
+        // codigo
+        if (must_skip) continue;
+
+        // codigo
+    }
+
+    return 0;
+````
+
+# Funciones
